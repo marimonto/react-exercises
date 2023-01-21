@@ -1,12 +1,12 @@
 import { useState } from 'react'
 function App() {
-  const [] = useState("");
+  const [text, setText] = useState("");
 
   return (
     <>
       <h3>Disable Button Challenge</h3>
-      <input type="text" />
-      <button>Submit</button>
+      <input type="text" onChange={(event)=>setText(event.target.value)} />
+      <button disabled={!text}>Submit</button>
     </>
   );
 }
