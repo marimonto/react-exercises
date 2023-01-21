@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { fireEvent, render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("should change the text value when change value input", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const input = screen.getByLabelText("input");
+  const textValue = screen.getByTestId("text-id");
+
+  expect(textValue.textContent).toBe("");
+  expect(input).toBeInTheDocument();
+
+  fireEvent.change(input, { target: { value: "new value" } });
+
+  expect(textValue.textContent).toBe("new value");
+  expect(input.value).toBe("new value");
 });
