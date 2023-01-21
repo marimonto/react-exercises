@@ -14,7 +14,7 @@ function App() {
       </div>
 
       <div className="wrapper">
-        <Child />
+        <Child setValue={setValue}/>
       </div>
     </>
   );

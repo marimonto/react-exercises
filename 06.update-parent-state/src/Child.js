@@ -1,10 +1,11 @@
 import "./App.css";
 
-function Child() {
+function Child({setValue}) {
+  
   return (
     <>
       <div>Child</div>
-      <button>Change Parent Value</button>
+      <button onClick={() => setValue("Updated!")}>Change Parent Value</button>
     </>
   );
 }

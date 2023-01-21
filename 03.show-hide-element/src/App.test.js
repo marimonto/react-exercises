@@ -9,7 +9,7 @@ test("should render Element Below", () => {
 });
 
 test("should hide Element Below", () => {
-  const { rerender } = render(<App />);
+  render(<App />);
   const text = screen.getByText(/Toggle Challenge/i);
   const buttonToHide = screen.getByRole("button", {
     name: /hide element below/i,
@@ -17,7 +17,6 @@ test("should hide Element Below", () => {
   act(() => {
     buttonToHide.click();
   });
-  rerender(<App />);
   const buttonToShow = screen.getByRole("button", {
     name: /show element below/i,
   });
