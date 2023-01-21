@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("should renders parent and child", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const parentText = screen.getByText(/Parent Component/i);
+  const childrenText = screen.getByText(/This is children content/i);
+  expect(parentText).toBeInTheDocument();
+  expect(childrenText).toBeInTheDocument();
+
 });
