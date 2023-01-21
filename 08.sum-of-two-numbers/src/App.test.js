@@ -8,7 +8,7 @@ test("should renders intial state", () => {
 });
 
 test("should sum numbers and show total", () => {
-  const { rerender } = render(<App />);
+  render(<App />);
   const total = screen.getByText(/total:/i);
 
   const firtNumberInput = screen.getByPlaceholderText(/first number/i);
@@ -22,7 +22,7 @@ test("should sum numbers and show total", () => {
   act(() => {
     submitButton.click();
   });
-  rerender(<App />);
+
   expect(total).toBeInTheDocument();
   expect(total.textContent).toBe("Total: 3");
 });
