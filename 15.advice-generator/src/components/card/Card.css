@@ -1,0 +1,18 @@
+.card{
+    background-color: hsl(217, 19%, 24%);
+    padding: 20px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+.advice-title{
+    text-align: center;
+    color:hsl(150, 100%, 66%)
+}
+
+.advice-quote{
+    text-align: center;
+    color:hsl(193, 38%, 86%);
+    font-size: 28px;
+}
