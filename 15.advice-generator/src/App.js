@@ -2,7 +2,11 @@ import "./App.css";
 import Advice from "./pages/Advice";
 
 function App() {
-  return <Advice />;
+  return (
+    <div>
+      <Advice />
+    </div>
+  );
 }
 
 export default App;

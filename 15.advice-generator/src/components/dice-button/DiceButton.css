@@ -1,0 +1,7 @@
+.dice-button {
+  position: relative;
+  background-color: hsl(150, 100%, 66%);
+  padding: 10px;
+  border-radius: 50%;
+  top: -25px;
+}
