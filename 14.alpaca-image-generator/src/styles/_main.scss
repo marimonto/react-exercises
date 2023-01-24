@@ -12,6 +12,16 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-img{
+img {
     position: absolute;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
 }

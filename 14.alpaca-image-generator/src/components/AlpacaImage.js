@@ -1,8 +1,10 @@
+import '../styles/components/_alpacalImage.scss';
+
 const AlpacaImage = ({ props }) => {
   const { background, neck, nose, mouth, eyes, hair, leg, ears, accessories } =
     props;
   return (
-    <>
+    <div className="image-container">
       <img src={background} alt="Background" className="background" />
       <img src={neck} alt="Neck" className="neck" />
       <img src={nose} alt="Nose" className="nose" />
@@ -14,7 +16,7 @@ const AlpacaImage = ({ props }) => {
       {accessories && (
         <img src={accessories} alt="accessories" className="accessories" />
       )}
-    </>
+    </div>
   );
 };
 

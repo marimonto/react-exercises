@@ -1,4 +1,4 @@
-import ImageGenerator from "./components/ImageGenerator";
+import ImageGenerator from "./pages/ImageGenerator";
 
 function App() {
   return <ImageGenerator />;
