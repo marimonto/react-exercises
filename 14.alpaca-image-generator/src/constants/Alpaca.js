@@ -1,3 +1,15 @@
+export const alpacaInitialObject = {
+  background: "blue50",
+  neck: "default",
+  nose: "nose",
+  mouth: "default",
+  eyes: "default",
+  hair: "default",
+  leg: "default",
+  ears: "default",
+  accessories: "",
+};
+
 export const alpacaImageDefault = {
   background: "assets/background/blue50.png",
   neck: "assets/neck/default.png",
@@ -9,3 +21,4 @@ export const alpacaImageDefault = {
   ears: "assets/ears/default.png",
   accessories: "",
 };
+

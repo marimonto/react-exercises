@@ -13,7 +13,12 @@ $input-shadow: none;
 
 img {
   position: absolute;
-  height: 30%;
+  height: 40%;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .row {
@@ -24,4 +29,24 @@ img {
 .column {
   display: flex;
   flex-direction: column;
+}
+
+.selector-col {
+  margin-left: 10px;
+  height: 400px;
+  max-width: 350px;
+}
+
+button {
+  background-color: white;
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+  padding: 6px 12px;
+  margin: 6px 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  &.active {
+    background-color: #0b5ed7;
+    color: white;
+  }
 }
