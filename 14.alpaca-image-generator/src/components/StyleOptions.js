@@ -1,5 +1,4 @@
 const StyleSelector = ({ options, handleOnClickStyle }) => {
-  console.log(options);
   return (
     <section className="row">
       <div className="col">
