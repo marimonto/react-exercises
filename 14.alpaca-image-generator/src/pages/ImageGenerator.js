@@ -3,8 +3,9 @@ import { alpacaInitialObject, alpacaImageDefault } from "../constants/Alpaca";
 import AlpacaImage from "../components/AlpacaImage";
 import OptionSelector from "../components/AccessorizeSelector";
 import StyleSelector from "../components/StyleOptions";
-import { StyleOptions } from "../constants/Options";
+import { AccessorizeOptions, StyleOptions } from "../constants/Options";
 import ColorOptions from "../components/ColorOptions";
+import { randomObject } from "../utils/functions";
 
 const ImageGenerator = () => {
   const [accessorizeOption, setAccessorizeOption] = useState("");
@@ -22,10 +23,20 @@ const ImageGenerator = () => {
     setAlpacaSetup(newSetup);
   };
 
+  const onClickRandom = () => {
+    AccessorizeOptions.forEach((element) => {
+      randomObject(element);
+      console.log(randomObject);
+    });
+  };
+
   return (
     <div className="container row">
       <div className="col">
         <AlpacaImage props={alpacaSetup} />
+        <button className="feature-button" onClick={onClickRandom}>
+          Random
+        </button>
       </div>
       <div className="col selector-col">
         <OptionSelector
@@ -38,6 +49,7 @@ const ImageGenerator = () => {
           (accessorizeOption === "Background" ? (
             <ColorOptions
               handleChangeColor={(value) => getAlpaSetupValues(value)}
+              activeOption={alpacaObject.background}
             />
           ) : (
             <StyleSelector

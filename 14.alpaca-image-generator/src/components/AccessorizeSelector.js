@@ -14,7 +14,6 @@ const AccessorizeSelector = ({
             onClick={() => handleOnClickAccessorizeOption(option)}
             className={activeOption === option && 'active'}
           >
-            {" "}
             {option}
           </button>
         ))}
