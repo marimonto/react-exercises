@@ -5,7 +5,7 @@ import OptionSelector from "../components/AccessorizeSelector";
 import StyleSelector from "../components/StyleOptions";
 import { AccessorizeOptions, StyleOptions } from "../constants/Options";
 import ColorOptions from "../components/ColorOptions";
-import { randomObject } from "../utils/functions";
+import { downloadImage, randomObject } from "../utils/functions";
 
 const ImageGenerator = () => {
   const [accessorizeOption, setAccessorizeOption] = useState("");
@@ -41,11 +41,14 @@ const ImageGenerator = () => {
     setAlpacaSetup(newSetup);
   };
   return (
-    <div className="container row">
+    <div className="container row" >
       <div className="col">
         <AlpacaImage props={alpacaSetup} />
         <button className="feature-button" onClick={onClickRandom}>
           Random
+        </button>
+        <button className="feature-button" onClick={downloadImage}>
+          Download
         </button>
       </div>
       <div className="col selector-col">
