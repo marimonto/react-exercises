@@ -17,7 +17,7 @@ export const StyleOptions = {
     { name: "Glasses", value: "glasses" },
     { name: "Headphone", value: "headphone" },
   ],
-  Backgrounds: [
+  Background: [
     "blue50",
     "blue60",
     "blue70",

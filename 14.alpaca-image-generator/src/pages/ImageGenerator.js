@@ -14,22 +14,32 @@ const ImageGenerator = () => {
 
   const getAlpaSetupValues = (value) => {
     const newSetup = { ...alpacaSetup };
-    newSetup[accessorizeOption.toLowerCase()] = value
-      ? `assets/${accessorizeOption.toLowerCase()}/${value}.png`
-      : "";
     const newObject = { ...alpacaObject };
-    newObject[accessorizeOption.toLowerCase()] = value;
-    setAlpacaObject(newObject);
-    setAlpacaSetup(newSetup);
+    setValues(value, newSetup, newObject);
   };
 
   const onClickRandom = () => {
+    const newSetup = structuredClone(alpacaSetup);
+    const newObject = structuredClone(alpacaObject);
     AccessorizeOptions.forEach((element) => {
-      randomObject(element);
-      console.log(randomObject);
+      let value = "";
+      if (element === "Background") {
+        value = randomObject(element);
+      } else {
+        value = randomObject(element).value;
+      }
+      setValues(value, newSetup, newObject, element);
     });
   };
 
+  const setValues = (value, newSetup, newObject, option = accessorizeOption) => {
+    newSetup[option.toLowerCase()] = value
+      ? `assets/${option.toLowerCase()}/${value}.png`
+      : "";
+    newObject[option.toLowerCase()] = value;
+    setAlpacaObject(newObject);
+    setAlpacaSetup(newSetup);
+  };
   return (
     <div className="container row">
       <div className="col">

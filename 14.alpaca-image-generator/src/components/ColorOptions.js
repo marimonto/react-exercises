@@ -7,7 +7,7 @@ const ColorOptions = ({ handleChangeColor, activeOption }) => {
     e.preventDefault();
     handleChangeColor(color);
   };
-  const colors = StyleOptions.Backgrounds;
+  const colors = StyleOptions.Background;
   return (
     <section className="row">
       <div className="col">
